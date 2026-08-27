@@ -1,0 +1,31 @@
+// Binary to Decimal
+       public static void binToDec(int binNum){
+        int mynum = binNum;
+        int pow = 0;
+        int dec = 0;
+
+        while(binNum > 0){
+          int ld = binNum % 10;
+          dec = dec + (ld * (int) Math.pow(2, pow));
+
+          pow++ ;
+          binNum = binNum /10;
+        }
+        System.out.println( "decimal number is" + dec) ;
+       }
+
+
+
+    // decimal to binary
+       public static void decToBin(int decNum){
+        int pow = 0 ;
+        int binNum = 0 ;
+
+        while(decNum > 0){
+          int rem = decNum % 2 ;
+          binNum = binNum + (rem * (int) Math.pow(10, pow));
+          pow = pow + 1;
+          decNum = decNum / 2 ;
+        }
+        System.out.println("binary number is "+ binNum);
+       }
