@@ -1,0 +1,30 @@
+import java.util.*;
+
+public class Main {
+    public static void main(String[] args) {
+      
+      int numbers[] = {10,20,30,40,50};
+      
+      int first = 0; 
+      int last = numbers.length-1;
+
+     
+      while(first < last){
+        int temp = numbers[last];
+        numbers[last] = numbers[first];
+        numbers[first] = temp;
+
+      first++;
+      last--;
+
+      }
+
+      //printing array loop
+      for(int num:numbers){
+        System.out.print(num + ",");
+      }
+    
+
+
+    }
+}
