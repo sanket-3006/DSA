@@ -1,0 +1,19 @@
+import java.util.*;
+
+public class Main {
+    public static void main(String[] args) {
+      
+      int numbers[] = {10,62,49,35,88,63,79};
+      int largestNum = Integer.MIN_VALUE; // minmum value of in integer 
+      //Integer.MAX_VALUE   maximum value of in integer
+
+      for(int i = 0; i<numbers.length; i++){
+        if(numbers[i] > largestNum){
+          largestNum = numbers[i];
+        }
+      }
+      System.out.print(largestNum);
+
+
+    }
+}
