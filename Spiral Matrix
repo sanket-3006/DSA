@@ -1,0 +1,59 @@
+import java.util.*;
+
+public class Main {
+
+    public static void sprial(int matrix [] []){
+      // j for colum and i for row
+      int startRow = 0;
+      int endRow = matrix.length-1;
+
+      int startColumn = 0;
+      int endColumn = matrix[0].length-1;
+
+
+      while(startRow <= endRow && startColumn <= endColumn){
+        // Top 
+        for(int j=startColumn ; j<= endColumn; j++){
+          System.out.print(matrix[startRow] [j]+ " ");
+        }
+        startRow++;
+
+        // right
+        for(int i = startRow; i<=endRow; i++){
+          System.out.print(matrix[i] [endColumn]+ " ");
+        }
+        endColumn--;
+
+        //bottom
+        if (startRow <= endRow) {
+        for(int j = endColumn; j>=startColumn; j--){
+          System.out.print(matrix[endRow] [j]+ " ");
+        }
+        endRow--;
+        }
+
+        //left
+        if (startColumn <= endColumn) {
+        for(int i = endRow; i>=startRow; i--){
+          System.out.print(matrix[i] [startColumn]+ " ");
+        }
+        startColumn++;
+        }
+
+      } 
+
+    }
+
+
+    public static void main(String[] args) {
+      
+      int matrix [] [] = {
+        {1,2,3,4},
+        {5,6,7,8},
+        {9,10,11,12},
+        {13,14,15,16}
+      };
+      
+      sprial(matrix);
+    }
+}
