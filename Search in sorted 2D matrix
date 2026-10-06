@@ -1,0 +1,15 @@
+int row = 0;
+int col = matrix[0].length - 1;
+
+while(row < matrix.length && col >= 0) {
+    
+    if(matrix[row][col] == key) {
+        System.out.print("(" + i + "," + j + ")")
+    }
+    else if(matrix[row][col] > key) {
+        col--;
+    }
+    else {
+        row++;
+    }
+}
